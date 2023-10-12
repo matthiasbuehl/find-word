@@ -1,4 +1,5 @@
-import { getPermutations } from "./utils";
+import { permutations } from "./utils";
 
-let res = getPermutations("a");
-console.log(res);
+export default function findWords(word: string, allWords: string[]): string[] {
+  return [];
+}
