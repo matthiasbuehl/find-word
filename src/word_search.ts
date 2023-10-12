@@ -1,10 +1,11 @@
-import { heapPermutations } from "./utils";
+import { heapPermutations as getPermutations } from "./utils";
+// import { permutations as getPermutations } from "./utils";
 
 export function findWords(word: string, allWords: Set<string>): string[] {
   if (word.length === 0) return [];
 
   let validWords: string[] = [];
-  let permutations = heapPermutations(word);
+  let permutations = getPermutations(word);
 
   for (let p of permutations) {
     validWords = validWords.concat(findWordsInPermutation(p, allWords));

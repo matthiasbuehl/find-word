@@ -1,4 +1,4 @@
-export function permutations(word: string): string[] {
+export function simplePermutations(word: string): string[] {
   if (word.length === 0) return [];
   if (word.length < 2) return [word];
 
@@ -8,7 +8,7 @@ export function permutations(word: string): string[] {
     let currentLetter = word[i];
     let otherLetters = word.slice(0, i) + word.slice(i + 1, word.length);
 
-    for (let permutation of permutations(otherLetters)) {
+    for (let permutation of simplePermutations(otherLetters)) {
       allPermutations.push(currentLetter + permutation);
     }
   }
@@ -19,12 +19,12 @@ export function permutations(word: string): string[] {
 export function heapPermutations(word: string): string[] {
   if (word.length === 0) return [];
 
-  let allPermutations: string[] = [];
+  let permutations: string[] = [];
   let characters = word.split("");
 
-  _heapPermutations(characters, characters.length, allPermutations);
+  _heapPermutations(characters, characters.length, permutations);
 
-  return allPermutations;
+  return permutations;
 }
 
 function _heapPermutations(

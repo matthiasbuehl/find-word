@@ -1,9 +1,9 @@
 import { describe, expect, it } from "@jest/globals";
-import { permutations, heapPermutations } from "../src/utils";
+import { simplePermutations, heapPermutations } from "../src/utils";
 
-describe("permutations", () => {
+describe("simplePermutations", () => {
   it("should permute abc", () => {
-    expect(permutations("abc").sort()).toEqual(
+    expect(simplePermutations("abc").sort()).toEqual(
       ["abc", "acb", "bac", "bca", "cab", "cba"].sort()
     );
   });
