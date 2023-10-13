@@ -1,5 +1,4 @@
 import { heapPermutations as getPermutations } from "./utils";
-// import { permutations as getPermutations } from "./utils";
 
 export function findWords(letters: string, allWords: Set<string>): string[] {
   if (letters.length === 0) return [];
