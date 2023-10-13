@@ -7,7 +7,7 @@
     "test": "jest",
     "build": "tsc",
     "dev": "ts-node-dev --respawn ./src/index.ts",
-    "go": "ts-node ./src/index.ts"
+    "find-words": "ts-node ./src/index.ts"
   },
   "author": "Matthias Buehl",
   "license": "ISC",

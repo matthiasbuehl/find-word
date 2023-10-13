@@ -1,11 +1,11 @@
 import allWords from "./all_words";
 import { findWords } from "./word_search";
 
-const letters = process.argv[2]?.split("=")?.[1];
+const letters = process.argv[2]?.split("=")?.[0];
 
 if (!letters) {
-  console.log("Usage: yarn go letters=<letters> (e.g. yarn go oogd)");
-  process.exit(1);
+  console.log("Usage: yarn find-words <letters> (e.g. yarn find-words oogd)");
+  process.exit(0);
 }
 
 let words = findWords(letters, allWords);
