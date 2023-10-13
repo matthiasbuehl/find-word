@@ -14,7 +14,7 @@ export function simplePermutations(letters: string): string[] {
     }
   }
 
-  return allPermutations;
+  return Array.from(new Set(allPermutations));
 }
 
 export function heapPermutations(letters: string): string[] {
@@ -25,7 +25,7 @@ export function heapPermutations(letters: string): string[] {
 
   _heapPermutations(characters, characters.length, permutations);
 
-  return permutations;
+  return Array.from(new Set(permutations));
 }
 
 function _heapPermutations(
