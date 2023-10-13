@@ -20,6 +20,8 @@ function findWordsInPermutation(
 ): string[] {
   let validWords: string[] = [];
 
+  // Time complexity of O(n^2) is not ideal, but we start simple.
+  // Also, the time complexity O(n!) of heap's algorithm is the true limitation.
   for (let i = 0; i < permutation.length; i++) {
     for (let j = i + 1; j <= permutation.length; j++) {
       let potentialWord = permutation.substring(i, j);
