@@ -41,13 +41,15 @@ function _heapPermutations(
     _heapPermutations(characters, size - 1, permutations);
 
     if (size % 2 === 1) {
-      let temp = characters[0];
-      characters[0] = characters[size - 1];
-      characters[size - 1] = temp;
+      swap(characters, 0, size - 1);
     } else {
-      let temp = characters[i];
-      characters[i] = characters[size - 1];
-      characters[size - 1] = temp;
+      swap(characters, i, size - 1);
     }
   }
+}
+
+function swap(arr: string[], i: number, j: number) {
+  let temp = arr[i];
+  arr[i] = arr[j];
+  arr[j] = temp;
 }
