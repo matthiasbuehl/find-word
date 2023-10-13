@@ -1,5 +1,3 @@
-// Source: http://www.wordfrequency.info/
-
 export default new Set([
   "A",
   "a",
