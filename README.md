@@ -1,6 +1,6 @@
 # find-words
 
-find-words is a node console application that extracts proper english words from a list of characters. This list of extractable words is limited to the 4000 most commonly used english words as defined by the file `/usr/share/dict/words` on a unix based system.
+find-words is a node console application that extracts proper english words from a list of characters. The list of extractable words is defined by the file `/usr/share/dict/words` which is found on unix based systems.
 
 ## Installation
 
