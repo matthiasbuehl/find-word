@@ -2,7 +2,7 @@ export function simplePermutations(letters: string): string[] {
   if (letters.length === 0) return [];
   if (letters.length < 2) return [letters];
 
-  let allPermutations: string[] = [];
+  let permutations: string[] = [];
 
   for (let i = 0; i < letters.length; i++) {
     let currentLetter = letters[i];
@@ -10,11 +10,11 @@ export function simplePermutations(letters: string): string[] {
       letters.slice(0, i) + letters.slice(i + 1, letters.length);
 
     for (let permutation of simplePermutations(otherLetters)) {
-      allPermutations.push(currentLetter + permutation);
+      permutations.push(currentLetter + permutation);
     }
   }
 
-  return Array.from(new Set(allPermutations));
+  return Array.from(new Set(permutations));
 }
 
 export function heapPermutations(letters: string): string[] {
